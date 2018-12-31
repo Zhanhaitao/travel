@@ -1,7 +1,15 @@
-<template
-  ><div>hello world</div>
+<template>
+  <div><v-header></v-header></div>
 </template>
 
-<script type="text/ecmascript-6"></script>
+<script>
+import vHeader from './components/header';
+export default {
+  name: 'home',
+  components: {
+    vHeader
+  }
+};
+</script>
 
-<style lang="scss" rel="stylesheet/scss"></style>
+<style></style>
