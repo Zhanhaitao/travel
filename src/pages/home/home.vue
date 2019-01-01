@@ -1,13 +1,15 @@
 <template>
-  <div><v-header></v-header></div>
+  <div><home-header></home-header><home-swiper></home-swiper></div>
 </template>
 
 <script>
-import vHeader from './components/header';
+import homeHeader from './components/header';
+import homeSwiper from './components/swiper';
 export default {
   name: 'home',
   components: {
-    vHeader
+    homeHeader,
+    homeSwiper
   }
 };
 </script>
