@@ -3,7 +3,7 @@
     <swiper :options="swiperOption">
       <swiper-slide class="icons" v-for="(page, index) of pages" :key="index">
         <div v-for="item of page" :key="item.id" class="icon">
-          <img class="img" :src="item.imgUrl" />
+          <div class="img"><img :src="item.imgUrl" /></div>
           <p class="desc">{{ item.desc }}</p>
         </div>
       </swiper-slide>
@@ -88,6 +88,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '~styles/varibles.styl'
+@import '~styles/mixins.styl'
 .icons
   display: flex;
   flex-wrap: wrap;
@@ -100,8 +102,16 @@ export default {
     padding-top: .1rem;
     .img
       width: 1.1rem;
+      height: 0;
+      padding-bottom: 1.1rem;
+      img {
+        width: 100%;
+      }
     .desc
       margin-top: .1rem;
       font-size: .28rem;
-      color: #212121;
+      color: $txtColor;
+      width: 100%;
+      text-align: center;
+      ellipsis();
 </style>
