@@ -40,7 +40,7 @@ export default {
       });
     },
     getHomeInfoSucc(res) {
-      console.log('res::', res);
+      // console.log('res::', res);
       res = res.data;
       if (res.ret && res.data) {
         const data = res.data;
